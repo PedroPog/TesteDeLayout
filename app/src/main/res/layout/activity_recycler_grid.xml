@@ -7,14 +7,15 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:gravity="center"
         android:text="RecyclerGridView"/>
     <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvNumbers"
+            android:id="@+id/idCourseRV"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
