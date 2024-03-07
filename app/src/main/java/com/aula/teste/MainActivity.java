@@ -7,12 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.aula.chat.ChatActivity;
+import com.aula.chat.LoginActivity;
+import com.aula.pdv.PrincipalActivity;
 import com.aula.teste.activity.GridActivity;
 import com.aula.teste.activity.RecyclerActivity;
 import com.aula.teste.activity.RecyclerGridActivity;
+import com.aula.teste.fragment.FragActivity;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnRecycler,btnRecyclerGrid,btnGrid;
+    Button btnRecycler,btnRecyclerGrid,btnGrid,btnFrag,btnPdv,btnChat;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
         btnRecycler = findViewById(R.id.btnRecycler);
         btnRecyclerGrid = findViewById(R.id.btnRecyclerGrid);
         btnGrid = findViewById(R.id.btnGrid);
+        btnFrag = findViewById(R.id.btnFrag);
+        btnPdv = findViewById(R.id.btnPdv);
+        btnChat = findViewById(R.id.btnChat);
     }
     private void setOnClicker(){
         btnRecycler.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +52,27 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, GridActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnFrag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, FragActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnPdv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, PrincipalActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });

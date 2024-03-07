@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "663704474159",
+    "project_id": "intergracaototal",
+    "storage_bucket": "intergracaototal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663704474159:android:675397812edb3968dd6cda",
+        "android_client_info": {
+          "package_name": "com.aula.applogin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAHsN57XPjdYRN3cynHwjm1Oy7TlprSnk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663704474159:android:7423b7c935e31698dd6cda",
+        "android_client_info": {
+          "package_name": "com.aula.teste"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAHsN57XPjdYRN3cynHwjm1Oy7TlprSnk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

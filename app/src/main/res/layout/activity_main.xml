@@ -28,5 +28,26 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:text="List Grid"/>
+    <Button
+        android:id="@+id/btnFrag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="Fragment"/>
+    <Button
+        android:id="@+id/btnPdv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="Pdv"/>
+    <Button
+        android:id="@+id/btnChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="Chat"/>
 
 </LinearLayout>
