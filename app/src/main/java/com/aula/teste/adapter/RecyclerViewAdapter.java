@@ -1,6 +1,7 @@
 package com.aula.teste.adapter;
 
 import android.content.Context;
+import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +13,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.aula.teste.R;
 import com.aula.teste.itens.RecyclerData;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.RecyclerViewHolder> {
     private ArrayList<RecyclerData> courseDataArrayList;
@@ -37,7 +40,19 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         // Set the data to textview and imageview.
         RecyclerData recyclerData = courseDataArrayList.get(position);
         holder.courseTV.setText(recyclerData.getTitle());
-        holder.courseIV.setImageResource(recyclerData.getImgid());
+        if(recyclerData.getImgid().equalsIgnoreCase("0")){
+            Picasso.get()
+                    .load("file://" + Environment.getExternalStorageDirectory()
+                            + "/satflex/imagens/naoencontrada.png")
+                    .into(holder.courseIV);
+        }else{
+            String nomeImagem[] = recyclerData.getImgid().split("/");
+
+            Picasso.get()
+                    .load("file://" + Environment.getExternalStorageDirectory()
+                            + "/satflex/imagens/" + nomeImagem[1])
+                    .into(holder.courseIV);
+        }
     }
 
     @Override

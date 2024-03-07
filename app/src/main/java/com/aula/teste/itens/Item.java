@@ -4,9 +4,9 @@ public class Item {
 
     String name;
     String email;
-    int imagem;
+    String imagem;
 
-    public Item(String name, String email, int imagem) {
+    public Item(String name, String email, String imagem) {
         this.name = name;
         this.email = email;
         this.imagem = imagem;
@@ -28,11 +28,11 @@ public class Item {
         this.email = email;
     }
 
-    public int getImagem() {
+    public String getImagem() {
         return imagem;
     }
 
-    public void setImagem(int imagem) {
+    public void setImagem(String imagem) {
         this.imagem = imagem;
     }
 }

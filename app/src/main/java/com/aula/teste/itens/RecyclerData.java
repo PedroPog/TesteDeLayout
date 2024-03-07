@@ -2,7 +2,7 @@ package com.aula.teste.itens;
 
 public class RecyclerData {
     private String title;
-    private int imgid;
+    private String imgid;
 
     public String getTitle() {
         return title;
@@ -12,15 +12,15 @@ public class RecyclerData {
         this.title = title;
     }
 
-    public int getImgid() {
+    public String getImgid() {
         return imgid;
     }
 
-    public void setImgid(int imgid) {
+    public void setImgid(String imgid) {
         this.imgid = imgid;
     }
 
-    public RecyclerData(String title, int imgid) {
+    public RecyclerData(String title, String imgid) {
         this.title = title;
         this.imgid = imgid;
     }
