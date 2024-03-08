@@ -18,11 +18,14 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class LoginActivity extends AppCompatActivity {
     EditText emailText,senhaText;
     TextView login,register;
     String email,senha;
+    DatabaseReference databaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +58,7 @@ public class LoginActivity extends AppCompatActivity {
         return true;
     }
     private void init(){
+        databaseReference = FirebaseDatabase.getInstance().getReference("users");
         emailText = findViewById(R.id.emailText);
         senhaText = findViewById(R.id.senhaText);
         login = findViewById(R.id.login);
@@ -83,16 +87,23 @@ public class LoginActivity extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<AuthResult>(){
                     @Override
                     public void onSuccess(AuthResult authResult){
-                        
+                        String username = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
+                        Intent intent = new Intent(LoginActivity.this,ChatActivity.class);
+                        intent.putExtra("name",username);
+                        startActivity(intent);
+                        finish();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         if(e instanceof FirebaseAuthInvalidCredentialsException){
-                            Toast.makeText(LoginActivity.this, "", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Usuario não existe", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            Toast.makeText(LoginActivity.this, "Auth falhou", Toast.LENGTH_SHORT).show();
                         }
                     }
-                })
+                });
     }
 }
