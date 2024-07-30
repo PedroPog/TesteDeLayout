@@ -14,8 +14,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Teste"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
+        <activity
+            android:name="com.aula.pdv.PdvActivity"
+            android:exported="false"
+            android:label="@string/title_activity_pdv"
+            android:theme="@style/NoActionBar" />
         <activity
             android:name="com.aula.chat.ChatMsgActivity"
             android:exported="false" />

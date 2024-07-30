@@ -6,4 +6,8 @@
     <color name="primaryDark">#075E54</color>
     <color name="primaryAccent">#25D366</color>
     <color name="primaryVarient">#ECE5DD</color>
+
+    //Menu
+    <color name="barra_menu">#4C4C4C</color>
+    <color name="barra_menu_sel">#4CAF50</color>
 </resources>
