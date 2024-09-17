@@ -37,10 +37,10 @@ public class ApiRetrofit {
         apiServiceNuvem = retrofit2.create(ApiService.class);
     }
 
-    public ApiService getUrlLocal() {
+    /*public ApiService getUrlLocal() {
         return apiService;
-    }
-    public ApiService getUrl() {
+    }*/
+    public ApiService getUrlLocal() {
         return apiServiceNuvem;
     }
 }

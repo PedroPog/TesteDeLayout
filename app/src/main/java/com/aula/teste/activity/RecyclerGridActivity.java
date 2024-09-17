@@ -94,7 +94,7 @@ public class RecyclerGridActivity extends AppCompatActivity {
         }
         ApiRetrofit retrofit = new ApiRetrofit();
         // String caminhoImagem = imagem.getNomePasta();
-        Call<ResponseBody> request = retrofit.getUrl().downloadImagem(imagem);
+        Call<ResponseBody> request = retrofit.getUrlLocal().downloadImagem(imagem);
         request.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
