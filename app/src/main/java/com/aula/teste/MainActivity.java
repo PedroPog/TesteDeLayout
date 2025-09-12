@@ -13,6 +13,8 @@ import com.aula.teste.activity.RecyclerActivity;
 import com.aula.teste.activity.RecyclerGridActivity;
 import com.aula.teste.fragment.FragActivity;
 
+import br.com.acbr.lib.nfe.ACBrLibNFe;
+
 public class MainActivity extends AppCompatActivity {
     Button btnRecycler,btnRecyclerGrid,btnGrid,btnFrag,btnChat;
     @Override
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         initBtn();
         setOnClicker();
+        ACBrLibNFe
     }
     private void initBtn(){
         btnRecycler = findViewById(R.id.btnRecycler);
